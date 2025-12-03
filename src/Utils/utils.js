@@ -1,7 +1,7 @@
 import { GAME_SYMBOLS, GAME_SYMBOLS_ORDER } from '@/Utils/constants.js'
 import { isWithinRange } from '@/Utils/math.js'
 
-export const isDev = import.meta.env.MODE === 'development'
+export const isDev = import.meta.env.VITE_NODE_ENV === 'development'
 
 export const sortByUpwardSymbol = (a, b) => {
   if (GAME_SYMBOLS_ORDER[a.mesh.userData.upwardSymbol] < GAME_SYMBOLS_ORDER[b.mesh.userData.upwardSymbol]) {

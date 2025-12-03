@@ -2,6 +2,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import EventEmitter from '@/Utils/EventEmitter.js'
+import { isDev } from '@/Utils/utils.js'
 import sources from '@/sources.js'
 import { Texture, TextureLoader, CubeTextureLoader, AudioLoader } from 'three'
 let instance = null
@@ -34,7 +35,10 @@ export default class Resources extends EventEmitter {
     this.loaders.gltfLoader = new GLTFLoader()
     this.loaders.objLoader = new OBJLoader()
     const dracoLoader = new DRACOLoader()
-    dracoLoader.setDecoderPath('/trials-of-faith/draco/')
+    const isSurge = window.location.hostname.includes('surge.sh')
+    const isDevelop = window.location.href.includes('trials-of-faith/develop')
+    const remoteBase = isDev || isSurge ? '' : isDevelop ? '/trials-of-faith/develop' : '/trials-of-faith'
+    dracoLoader.setDecoderPath(`${remoteBase}/draco/`)
     this.loaders.gltfLoader.setDRACOLoader(dracoLoader)
     this.loaders.textureLoader = new TextureLoader()
     this.loaders.cubeTextureLoader = new CubeTextureLoader()

@@ -23,6 +23,11 @@ npm run build
 npm run deploy
 ```
 
+# Gameplay
+![dice throwing](https://github.com/konstantinsteinmiller/trials-of-faith/blob/master/src/assets/documentation/trials-of-faith_gameplay.webp)
+![spells](https://github.com/konstantinsteinmiller/trials-of-faith/blob/master/src/assets/documentation/trials-of-faith_spells.webp)
+
+[demo](https://konstantinsteinmiller.github.io/trials-of-faith/)
 
 ## Powered by
 - three.js

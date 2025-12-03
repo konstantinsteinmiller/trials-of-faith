@@ -1,4 +1,9 @@
 /node_modules
+/dist
 .npmrc
 .env
+.env.*
+.env.production
+.env.development
 CNAME
+/.idea/*

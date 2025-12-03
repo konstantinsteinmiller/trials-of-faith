@@ -34,7 +34,7 @@ export default class Resources extends EventEmitter {
     this.loaders.gltfLoader = new GLTFLoader()
     this.loaders.objLoader = new OBJLoader()
     const dracoLoader = new DRACOLoader()
-    dracoLoader.setDecoderPath('/draco/')
+    dracoLoader.setDecoderPath('/trials-of-faith/draco/')
     this.loaders.gltfLoader.setDRACOLoader(dracoLoader)
     this.loaders.textureLoader = new TextureLoader()
     this.loaders.cubeTextureLoader = new CubeTextureLoader()
@@ -76,7 +76,7 @@ export default class Resources extends EventEmitter {
         audio.addEventListener(
           'canplaythrough',
           (event) => {
-            this.sourceLoaded(source, event.path.pop())
+            this.sourceLoaded(source, () => event?.path?.pop())
           },
           false,
         )

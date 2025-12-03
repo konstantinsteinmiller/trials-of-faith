@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
-// import glsl from 'vite-plugin-glsl'
-// import { threeMinifier } from '@yushijinhun/three-minifier-rollup'
 import { resolve } from 'path'
 import image from 'rollup-plugin-images'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),

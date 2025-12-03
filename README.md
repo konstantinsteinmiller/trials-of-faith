@@ -1,9 +1,7 @@
 # Trials of Faith
 A dice mini-game with physics in three.js
-and colyseus authoratative multiplayer server
 
-playable demo on http://trials-of-faith.steinmiller.org
-or http://trials-of-faith.steinmiller.org/#debug to have some debugging options
+playable [demo](https://konstantinsteinmiller.github.io/trials-of-faith) to have some debugging options
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
@@ -28,7 +26,6 @@ npm run deploy
 
 ## Powered by
 - three.js
-- colyseus
 - express
 - daisyUi
 

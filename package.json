@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "env-cmd -f ./.env cross-env-shell \"surge ./dist $REMOTE_URL\""
+    "deploy": "vite build --base=/ && surge ./dist http://trials-of-faith.surge.sh",
+    "build-github-master": "vite build --base=/trials-of-faith/ --outDir=dist",
+    "build-github-develop": "vite build --base=/trials-of-faith/develop/ --outDir=dist/develop"
   },
   "git": {
     "scripts": {
